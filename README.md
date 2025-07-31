@@ -25,20 +25,20 @@ Dark themed UI with responsive design
 - Tools: VS Code, SQL Server Management Studio
 
 **Installation & Setup**
-# Step 1: Clone the repository
+Step 1: Clone the repository
 git clone https://github.com/your-username/online-idea-box.git
 cd online-idea-box
 
-# Step 2: Create virtual environment (optional but recommended)
+Step 2: Create virtual environment (optional but recommended)
 python -m venv venv
 venv\Scripts\activate     # For Windows
-# or
+or
 source venv/bin/activate  # For Mac/Linux
 
-# Step 3: Install required packages
+Step 3: Install required packages
 pip install -r requirements.txt
 
-# Step 4: Configure database connection
+Step 4: Configure database connection
  conn_str = (
     'DRIVER={ODBC Driver 17 for SQL Server};'
     'SERVER=DESKTOP-56E9GOD\\SQLEXPRESS;'
@@ -46,7 +46,6 @@ pip install -r requirements.txt
     'UID=sa;PWD=rns11;'
     'TrustServerCertificate=yes;'
 )
-
-# Step 5: Run the Flask application
+ Step 5: Run the Flask application
 python app.py
 
