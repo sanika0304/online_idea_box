@@ -1,4 +1,4 @@
-### 📖 Project Description
+## **Project Description**
 
 **Online Idea Box** is a web-based platform designed to streamline idea collection, feedback, and communication between students, faculty, and administrators within an educational institution. The system provides a centralized space where users can submit innovative suggestions or raise concerns, and administrators can track, respond to, and manage those submissions efficiently.
 
@@ -75,7 +75,7 @@ Step 4: Configure database connection
 
 Step 5: Run the Flask application
 python app.py
-```bash
+```
 
 
 ###  Future Enhancements
