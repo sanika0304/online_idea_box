@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard - Online Idea Box</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+  <div class="header">
+    <h2>All Submitted Ideas (Admin View)</h2>
+    <a href="/logout" class="logout-btn">Logout</a>
+  </div>
+
+  <div class="content">
+    {% if ideas %}
+      <table>
+        <thead>
+          <tr>
+            <th>User Name</th>
+            <th>Role</th>
+            <th>Idea</th>
+            <th>Submitted At</th>
+            <th>Reply</th>
+            <th>Reply Action</th>
+            <th>Status</th>
+            <th>Status Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for idea in ideas %}
+          <tr>
+            <!-- Reply Form -->
+            <form method="POST" action="/admin/reply" class="reply-form">
+              <td>{{ idea.name }}</td>
+              <td>{{ idea.role }}</td>
+              <td>{{ idea.idea_text }}</td>
+              <td>{{ idea.submitted_at }}</td>
+              <td>
+                <textarea name="reply_text" rows="2" placeholder="Type your reply here">{{ idea.reply_text or '' }}</textarea>
+              </td>
+              <td>
+                <input type="hidden" name="idea_id" value="{{ idea.id }}">
+                <button type="submit">Reply</button>
+              </td>
+            </form>
+
+            <!-- Status Update Form -->
+            <form method="POST" action="/admin/status" class="status-form">
+              <td>
+                <select name="status">
+                  <option value="Viewed" {% if idea.status == 'Viewed' %}selected{% endif %}>Viewed</option>
+                  <option value="In Process" {% if idea.status == 'In Process' %}selected{% endif %}>In Process</option>
+                  <option value="Completed" {% if idea.status == 'Completed' %}selected{% endif %}>Completed</option>
+                </select>
+              </td>
+              <td>
+                <input type="hidden" name="idea_id" value="{{ idea.id }}">
+                <button type="submit">Update</button>
+              </td>
+            </form>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    {% else %}
+      <p>No ideas have been submitted yet.</p>
+    {% endif %}
+  </div>
+
+</body>
+</html>

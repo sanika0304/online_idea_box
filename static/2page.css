@@ -1,0 +1,118 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/static/1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* ========== HEADER ========== */
+.header {
+  width: 100%;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+.header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+.back-btn {
+  color: #00c0ff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+/* ========== FORM CONTAINER ========== */
+.container {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+  width: 100%;
+  margin: 140px auto 0;
+}
+
+/* ========== FORM ELEMENTS ========== */
+form textarea,
+form button {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 15px;
+}
+
+form textarea {
+  resize: vertical;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+form textarea::placeholder {
+  color: #ccc;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* ========== NAV LINKS BELOW FORM ========== */
+.nav-links {
+  text-align: center;
+}
+
+.btn-link {
+  color: #00c0ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .container {
+    margin: 160px 20px 0;
+    padding: 30px 20px;
+  }
+}

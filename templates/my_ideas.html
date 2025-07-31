@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>My Ideas - Online Idea Box</title>
+  <link rel="stylesheet" href="/static/3page.css">
+  <script>
+    function filterStatus() {
+      const selected = document.getElementById("status-filter").value.toLowerCase();
+      const ideas = document.querySelectorAll(".idea-box");
+
+      ideas.forEach(idea => {
+        const statusTag = idea.querySelector(".status-tag");
+        const statusText = statusTag ? statusTag.textContent.trim().toLowerCase() : "";
+        idea.style.display = (selected === "all" || statusText === selected) ? "block" : "none";
+      });
+    }
+
+    function exportToPrint() {
+      window.print();
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <!-- Left side: Filter + Export -->
+    <div class="header-left">
+      <form onsubmit="return false;">
+        <select id="status-filter" onchange="filterStatus()">
+          <option value="all">All</option>
+          <option value="Pending">Pending</option>
+          <option value="Viewed">Viewed</option>
+          <option value="In Process">In Process</option>
+          <option value="Completed">Completed</option>
+        </select>
+      </form>
+      <button onclick="exportToPrint()">Export to PDF</button>
+    </div>
+
+    <!-- Centered Title -->
+    <div class="header-title">Your Submitted Ideas</div>
+
+    <!-- Right side: Links -->
+    <div class="nav-links">
+      <a href="/submit">Submit Another Idea</a> |
+      <a href="/logout">Logout</a>
+    </div>
+  </div>
+
+  <!-- Ideas List -->
+  <div class="ideas-wrapper">
+    {% if ideas %}
+      {% for idea in ideas %}
+        <div class="idea-box">
+          <div class="status-tag 
+            {% if idea.status == 'Viewed' %}status-viewed
+            {% elif idea.status == 'In Process' %}status-inprocess
+            {% elif idea.status == 'Completed' %}status-completed
+            {% else %}status-pending{% endif %}">
+            {{ idea.status or 'Pending' }}
+          </div>
+
+          <p>{{ idea.idea_text }}</p>
+          <small>Submitted on: {{ idea.submitted_at }}</small>
+
+          {% if idea.reply_text %}
+            <div class="reply-box">
+              <strong>Admin Reply:</strong>
+              <p>{{ idea.reply_text }}</p>
+            </div>
+          {% else %}
+            <p><em>No reply from admin yet.</em></p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    {% else %}
+      <p class="no-ideas-msg">You haven't submitted any ideas yet.</p>
+    {% endif %}
+  </div>
+
+</body>
+</html>

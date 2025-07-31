@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submit Idea - Online Idea Box</title>
+  <link rel="stylesheet" href="/static/2page.css">
+</head>
+<body>
+
+  <!-- Header with back button -->
+  <div class="header">
+    <a href="javascript:history.back()" class="back-btn">← Back</a>
+    <h2>Submit Your Idea or Feedback</h2>
+    <div></div> <!-- spacer -->
+  </div>
+
+  <!-- Centered form container -->
+  <div class="container">
+    <form action="/submit" method="POST">
+      <textarea name="idea_text" placeholder="Write your idea or feedback here..." rows="6" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="nav-links">
+      <a href="/my_ideas" class="btn-link">View My Ideas</a> |
+      <a href="/logout" class="btn-link">Logout</a>
+    </div>
+  </div>
+
+</body>
+</html>

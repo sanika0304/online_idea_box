@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Online Idea Box</title>
+  <link rel="stylesheet" href="/static/1page.css">
+  <script>
+    function showRegister() {
+      document.getElementById('login-form').style.display = 'none';
+      document.getElementById('register-form').style.display = 'block';
+    }
+
+    function showLogin() {
+      document.getElementById('register-form').style.display = 'none';
+      document.getElementById('login-form').style.display = 'block';
+    }
+  </script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo"><h1>Online Idea Box</h1></div>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/aboutus">About Us</a>
+      <a href="/submit">Idea Page</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Section -->
+  <section class="main-section">
+    <!-- Left Text -->
+    <div class="left-text">
+      <h2>Welcome to the Online Idea Box</h2>
+      <p>Submit your innovative ideas, feedback, or suggestions to improve your college or university. Whether you're a student or faculty member, your thoughts matter!</p>
+    </div>
+
+    <!-- Right Form Container -->
+    <div class="login-box">
+
+      <!-- Login Form -->
+      <div id="login-form">
+        <h3>Login</h3>
+        <form method="POST" action="/">
+          <input type="email" name="login_email" placeholder="Email" required>
+          <input type="password" name="login_password" placeholder="Password" required>
+          <button type="submit">Login</button>
+          <p>Don't have an account? <a href="javascript:void(0);" onclick="showRegister()">Register here</a></p>
+        </form>
+      </div>
+
+      <!-- Register Form -->
+      <div id="register-form" style="display: none;">
+        <h3>Register</h3>
+        <form method="POST" action="/">
+          <input type="text" name="reg_name" placeholder="Full Name" required>
+          <input type="email" name="reg_email" placeholder="Email" required>
+          <select name="reg_role" required>
+            <option value="">Select Role</option>
+            <option value="Student">Student</option>
+            <option value="Faculty">Faculty</option>
+            <option value="Admin">Admin</option>
+          </select>
+          <input type="password" name="reg_password" placeholder="Password" required>
+          <button type="submit">Register</button>
+          <p>Already have an account? <a href="javascript:void(0);" onclick="showLogin()">Login here</a></p>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

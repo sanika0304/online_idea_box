@@ -1,0 +1,170 @@
+/* ===== BASE ===== */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/static/1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== HEADER ===== */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.header-title {
+  flex: 1;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.header-left {
+  flex: 1;
+  display: flex;
+  gap: 10px;
+}
+
+.header-left select,
+.header-left button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: rgba(12, 90, 214, 0.1);
+  color: rgb(252, 252, 252);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.header-left button:hover {
+  background-color: rgba(0, 191, 255, 0.2);
+}
+
+/* ===== NAVIGATION LINKS ===== */
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content:right;
+  padding-right: 45px;
+   gap: 15px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  color: #00ffff;
+  font-weight: bold;
+  text-decoration: none;
+  margin: left 20px;
+  font-size: 18px;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+/* ===== MAIN WRAPPER ===== */
+.ideas-wrapper {
+  padding: 110px 30px 30px;
+}
+
+/* ===== IDEA BOX ===== */
+.idea-box {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 20px;
+  margin: 20px px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 40px auto;
+  border-left: 5px solid #00c0ff;
+  border-radius: 6px;
+  max-width: 1000px;
+}
+
+/* ===== STATUS BADGE ===== */
+.status-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.status-viewed {
+  background-color: #007bff;
+}
+.status-inprocess {
+  background-color: #ffc107;
+  color: #222;
+}
+.status-completed {
+  background-color: #28a745;
+}
+.status-pending {
+  background-color: #6c757d;
+}
+
+/* ===== REPLY BOX ===== */
+.reply-box {
+  margin-top: 15px;
+  padding: 12px 15px;
+  background-color: rgba(0, 191, 255, 0.15);
+  border-left: 4px solid #00bfff;
+  border-radius: 6px;
+}
+.reply-box p {
+  color: #e3f4ff;
+  margin-top: 6px;
+}
+
+/* ===== EMPTY STATE ===== */
+.no-ideas-msg {
+  text-align: center;
+  margin-top: 150px;
+  color: #ccc;
+}
+
+/* ===== RESPONSIVE ===== */
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-title {
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .header-left,
+  .nav-links {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  .idea-box {
+    margin: 20px 10px;
+  }
+
+  .status-tag {
+    font-size: 10px;
+    padding: 4px 8px;
+    top: 10px;
+    right: 10px;
+  }
+}

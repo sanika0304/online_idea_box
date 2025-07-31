@@ -1,0 +1,293 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/static/1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* ========== HEADER ========== */
+header, .header {
+  width: 100%;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+header h1, .header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* ========== BACK BUTTON ========== */
+.back-btn {
+  color: white;
+  font-size: 16px;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  background-color: #444;
+  transition: background-color 0.3s ease;
+}
+.back-btn:hover {
+  background-color: #00bfff;
+  color: black;
+}
+
+/* ========== LOGOUT BUTTON ========== */
+.logout-btn {
+  text-decoration: none;
+  background-color: #dc3545;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.logout-btn:hover {
+  background-color: #c82333;
+}
+
+/* ========== NAVIGATION ========== */
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #00bfff;
+}
+
+/* ========== FORM CONTAINER ========== */
+.container,
+.login-box {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  max-width: 500px;
+  width: 100%;
+  margin: 120px auto 0;
+}
+
+h2, h3 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+/* ========== FORM ELEMENTS ========== */
+form input,
+form select,
+form textarea,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+form input,
+form select,
+form textarea {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #ccc;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* ========== IDEA DISPLAY BOX ========== */
+.idea-box {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  margin: 100px 20px 20px;
+  border-left: 5px solid #00c0ff;
+  border-radius: 8px;
+}
+
+.idea-box p {
+  margin: 8px 0 0;
+}
+
+.idea-box hr {
+  margin-top: 10px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+
+/* ========== STATUS BADGE ========== */
+.status-tag {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+}
+
+.status-viewed {
+  background-color: #007bff;
+}
+
+.status-inprocess {
+  background-color: #ffc107;
+  color: #222;
+}
+
+.status-completed {
+  background-color: #28a745;
+}
+
+.status-pending {
+  background-color: #6c757d;
+}
+
+/* ========== ADMIN TABLE ========== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 120px;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+}
+
+th {
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #00c0ff;
+}
+
+td form {
+  margin: 0;
+}
+
+td textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  resize: vertical;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+}
+
+/* ========== ADMIN REPLY BOX ========== */
+.reply-box {
+  margin-top: 15px;
+  padding: 12px 15px;
+  background-color: rgba(0, 191, 255, 0.15);
+  border-left: 4px solid #00bfff;
+  border-radius: 6px;
+}
+
+.reply-box p {
+  color: #e3f4ff;
+  margin-top: 6px;
+}
+
+/* ========== LINKS BELOW FORM ========== */
+.nav-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.btn-link {
+  color: #00c0ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+/* ========== CONTENT WRAPPER ========== */
+.content {
+  padding: 140px 20px 20px;
+}
+
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 20px 40px;
+  }
+
+  .left-text {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+
+  header, .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav {
+    margin-top: 10px;
+    flex-wrap: wrap;
+  }
+
+  .container,
+  .login-box {
+    margin: 20px;
+  }
+
+  .logout-btn {
+    align-self: flex-end;
+    margin-top: 10px;
+  }
+
+  table, thead, tbody, th, td, tr {
+    display: block;
+    width: 100%;
+  }
+
+  td {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,147 @@
+/* ========== RESET & BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('/static/1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+}
+
+/* ========== HEADER ========== */
+header {
+  width: 100%;
+  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #00bfff;
+}
+
+/* ========== MAIN SECTION ========== */
+.main-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 60px 40px;
+  min-height: 100vh;
+  gap: 40px;
+}
+
+.left-text {
+  flex: 1;
+}
+
+.left-text h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.left-text p {
+  font-size: 18px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* ========== LOGIN BOX ========== */
+.login-box {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 30px 25px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  max-width: 400px;
+  margin: 0 auto;
+  transition: all 0.5s ease-in-out;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00bfff;
+}
+
+/* ========== FORM ELEMENTS ========== */
+form input,
+form select,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+form input,
+form select {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+form input::placeholder {
+  color: #ccc;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+form p {
+  text-align: center;
+  font-size: 14px;
+}
+
+form a {
+  color: #00c0ff;
+  text-decoration: none;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+/* ========== RESPONSIVE ========== */
+@media screen and (max-width: 768px) {
+  .main-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 120px 20px 40px;
+  }
+
+  .left-text {
+    margin-bottom: 30px;
+  }
+}
