@@ -16,7 +16,9 @@ It includes:
 
 This project encourages active participation and transparency in institutional development by making idea sharing accessible, organized, and trackable.
 
+## **Project Structure**
 
+```
 online-idea-box/
 │
 ├── app.py                          # Main Flask application
@@ -37,6 +39,7 @@ online-idea-box/
 │
 └── db/                             # (Optional) SQL scripts, backups
     └── schema.sql                  # SQL Server schema and seed data
+```
 
 **Tech Stack / Technologies Used**
 - Frontend: HTML, CSS, JavaScript
