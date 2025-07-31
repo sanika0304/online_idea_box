@@ -16,7 +16,6 @@ It includes:
 
 This project encourages active participation and transparency in institutional development by making idea sharing accessible, organized, and trackable.
 
-Dark themed UI with responsive design
 **Tech Stack / Technologies Used**
 - Frontend: HTML, CSS, JavaScript
 - Backend: Python (Flask)
@@ -25,11 +24,12 @@ Dark themed UI with responsive design
 - Tools: VS Code, SQL Server Management Studio
 
 **Installation & Setup**
+
 Step 1: Clone the repository
 git clone https://github.com/your-username/online-idea-box.git
 cd online-idea-box
 
-Step 2: Create virtual environment (optional but recommended)
+Step 2: Create virtual environment 
 python -m venv venv
 venv\Scripts\activate     # For Windows
 or
