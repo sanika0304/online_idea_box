@@ -49,6 +49,7 @@ online-idea-box/
 - Tools: VS Code, SQL Server Management Studio
 
 **Installation & Setup**
+```
 
 Step 1: Clone the repository
 git clone https://github.com/your-username/online-idea-box.git
@@ -74,12 +75,10 @@ Step 4: Configure database connection
 
 Step 5: Run the Flask application
 python app.py
+```bash
 
-Here are some **future enhancements** you can mention in your project’s README to show how the **Online Idea Box** can be expanded:
 
----
-
-### 🚀 Future Enhancements
+###  Future Enhancements
 
 * **Email Notifications**: Notify users and admins via email when a new idea is submitted or replied to.
 * **File Upload Support**: Allow users to attach screenshots or documents to their idea submissions.
@@ -88,7 +87,7 @@ Here are some **future enhancements** you can mention in your project’s README
 * **Comment Threading**: Allow follow-up comments between users and admins on each idea.
 * **User Profiles**: Enable users to view and update their profile, see all their past submissions and replies.
 
- 📌 **Conclusion**
+ ## **Conclusion**
 The Online Idea Box project offers a simple and user-friendly platform for students and faculty to submit their ideas and feedback, while enabling admins to review and respond effectively. Built with Flask and SQL Server, it demonstrates practical skills in web development, database integration, and user role management. This system fosters transparent communication and encourages innovation within educational institutions.
 
 
